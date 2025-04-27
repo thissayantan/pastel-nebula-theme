@@ -76,7 +76,7 @@
           "background": "#92C5C0",
           "background_templates": ["{{ if .Error }}#E9AEB2{{ end }}"],
           "properties": { "always_enabled": true },
-          "template": "{{if .Error }}  {{else}}  {{end}}"
+          "template": "{{if .Error }} \uf00d {{else}} \uf00c {{end}}"
         }
       ]
     },
