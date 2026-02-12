@@ -55,11 +55,18 @@
           "style": "plain",
           "foreground": "#E65100",
           "background": "#F9E8D2",
-          "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "template": " \ue235 {{ .Full }} ",
           "properties": {
             "display_mode": "files",
             "fetch_virtual_env": false
           }
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#6A1B9A",
+          "background": "#E1BEE7",
+          "template": "{{ if .Env.VIRTUAL_ENV }} \uf423 ({{ regexReplaceAll \".*[/]\" .Env.VIRTUAL_ENV \"\" }}) {{ end }}"
         },
         {
           "type": "executiontime",
@@ -88,7 +95,7 @@
         {
           "type": "text",
           "style": "plain",
-          "template": " \ue285 "
+          "template": " \ue285"
         }
       ]
     }
