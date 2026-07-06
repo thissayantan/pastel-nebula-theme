@@ -51,6 +51,17 @@
           }
         },
         {
+          "type": "go",
+          "style": "plain",
+          "foreground": "#006D75",
+          "background": "#CDEAF0",
+          "template": " \ue626 {{ .Full }} ",
+          "properties": {
+            "fetch_version": true,
+            "display_mode": "files"
+          }
+        },
+        {
           "type": "python",
           "style": "plain",
           "foreground": "#E65100",
