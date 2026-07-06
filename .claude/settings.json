@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path // .tool_response.filePath' | { read -r f; case \"$f\" in *.omp.json) jq empty \"$f\" 2>/dev/null || printf '{\"systemMessage\":\"⚠️ %s is not valid JSON — theme will not load\"}\\n' \"$(basename \"$f\")\" ;; esac; }",
+            "statusMessage": "Validating theme JSON..."
+          }
+        ]
+      }
+    ]
+  }
+}
