@@ -37,7 +37,11 @@
             "branch_template": "{{ .Branch }}",
             "fetch_stash_count": true,
             "fetch_status": true,
-            "fetch_upstream_icon": true
+            "fetch_upstream_icon": true,
+            "github_icon": "\uf09b",
+            "gitlab_icon": "\uf296",
+            "bitbucket_icon": "\uf171",
+            "git_icon": "\ue702"
           }
         },
         {
