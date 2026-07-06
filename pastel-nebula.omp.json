@@ -32,7 +32,7 @@
           "style": "plain",
           "foreground": "#795548",
           "background": "#F2EED3",
-          "template": " {{ .UpstreamIcon }} \u2387 {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+          "template": " {{ .UpstreamIcon }} {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
           "properties": {
             "branch_template": "{{ .Branch }}",
             "fetch_stash_count": true,
@@ -41,7 +41,8 @@
             "github_icon": "\uf09b",
             "gitlab_icon": "\uf296",
             "bitbucket_icon": "\uf171",
-            "git_icon": "\ue702"
+            "git_icon": "\ue702",
+            "branch_icon": "\u2387 "
           }
         },
         {
@@ -89,15 +90,21 @@
           "foreground": "#263238",
           "background": "#DEE5E8",
           "template": " \uf43a {{ .FormattedMs }}\u2800",
-          "properties": { "always_enabled": false }
+          "properties": {
+            "always_enabled": false
+          }
         },
         {
           "type": "status",
           "style": "plain",
           "foreground": "#ffffff",
           "background": "#92C5C0",
-          "background_templates": ["{{ if .Error }}#E9AEB2{{ end }}"],
-          "properties": { "always_enabled": true },
+          "background_templates": [
+            "{{ if .Error }}#E9AEB2{{ end }}"
+          ],
+          "properties": {
+            "always_enabled": true
+          },
           "template": "{{if .Error }} \uf00d {{else}} \uf00c {{end}}"
         }
       ]
