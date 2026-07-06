@@ -4,7 +4,7 @@ A soothing pastel-colored theme for [Oh My Posh](https://ohmyposh.dev/), featuri
 
 ## Preview
 
-![Pastel Nebula Theme Preview](./pastel-nebula.png)
+![Pastel Nebula Theme Preview](pastel-nebula.png)
 
 ## Features
 
